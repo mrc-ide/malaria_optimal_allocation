@@ -1,5 +1,6 @@
 # Find annual nets to distribute for a given net usage 
 library(here)
+library(tidyverse)
 library(ggplot2)
 
 # working directory
@@ -124,9 +125,8 @@ find_usage <- function(use_rate){
   
   # Use net loss function to calculate annual nets distributed per capita to maintain the 
   # input equilibrium nets per capita 
-  # (multiply by the mean proportion of nets retained within the distribution cycle)
-  result$annual_percapita_nets_distributed <- result$percapita_nets * 
-    mean(net_loss_map(seq(0,distribution_freq,1)))
+  result$annual_percapita_nets_distributed <- result$percapita_nets / 
+    ((distribution_freq/365) * mean(net_loss_map(seq(0,distribution_freq,1))))
   
   # Note this represents the equilibrium nets to distribute annually for the given 
   # distribution cycle, but how this is applied can be chosen.
