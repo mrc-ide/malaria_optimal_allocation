@@ -2,6 +2,8 @@
 
 ## Summary
 
+This repository contains the code for the following article: Schmit, Topazian et al. (2024). Modelling resource allocation strategies for insecticide-treated bed nets to achieve malaria eradication (in press at eLife).
+
 This modelling study explores optimal strategies to allocate limited resources to achieve global malaria eradication. Essentially, we attempt to address the following question: should resources initially focus on high burden countries, elimination countries, or a balance between the two?
 
 The mathematical model used here adapts the [deterministic, compartmental model](https://github.com/mrc-ide/deterministic-malaria-model) of *P. falciparum* transmission previously fit to age-stratified data across a variety of transmission settings in sub-Saharan Africa ([Griffin et al. 2014](https://www.nature.com/articles/ncomms4136)). We use data from simulations of increasing insecticide-treated net usage in 25 different locations representing the world's range of *PfPR*<sub>2-10</sub> values and corresponding population sizes.
